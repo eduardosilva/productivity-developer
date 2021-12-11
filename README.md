@@ -52,9 +52,31 @@ pushd .config/
 ```
 Using popd to go back to the previous directory
 
+
 ```bash
 popd
 ```
+
+### Extract column from a tabular output
+
+
+```bash
+git status -s | awk '{print $2}'
+```
+
+or you can create a function as recommended in the reference (it was what I did):
+
+```bash
+function col {
+    awk -v col=$1 '{print $col}'
+}
+```
+
+```bash
+git status -s | col 2
+```
+
+[Reference](https://blog.developer.atlassian.com/ten-tips-for-wonderful-bash-productivity/)
 
 ### Search, remove, change directories and another things using wildcard
 
