@@ -41,6 +41,11 @@ function root {
 }
 ```
 
+### Go to the last branch
+
+you can jump back to your previous Git branch with `git checkout -`
+
+
 ## Bash
 
 ### Shortcut to the latest command
