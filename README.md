@@ -55,6 +55,11 @@ git status
 After using `CTRL+R` type `status`
 
 
+### Go to the last directory
+
+Use `cd -` to go back into the directory you were in before your last cd command. 
+
+
 ### Using pushd and popd to navigate between directories
 
 Using pushd to go to .config directory
