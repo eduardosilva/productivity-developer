@@ -43,6 +43,18 @@ function root {
 
 ## Bash
 
+### Shortcut to the latest command
+
+You can use `CTRL+R` and type to search last command 
+
+First:
+```bash
+git status
+```
+
+After using `CTRL+R` type `status`
+
+
 ### Using pushd and popd to navigate between directories
 
 Using pushd to go to .config directory
