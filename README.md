@@ -48,6 +48,14 @@ you can jump back to your previous Git branch with `git checkout -`
 
 ## Bash
 
+### Navigation
+
+* `CTRL+A`: beginning of the line
+* `CTRL+E`: ending of the line
+* `ALT+F`: next word
+* `ALT+B`: previous word
+
+
 ### Shortcut to the latest command
 
 You can use `CTRL+R` and type to search last command 
