@@ -6,6 +6,7 @@ These are  my thoughts on how to be a better developer improving performance in 
 
 - [Git](#git)
 - [Bash](#bash)
+- [Regex](#regex)
 - [VSCode](#vscode)
 - [VIM](#vim)
 
@@ -44,6 +45,29 @@ function root {
 ### Go to the last branch
 
 you can jump back to your previous Git branch with `git checkout -`
+
+### Rebase
+
+I usually commit my changes frequently but I don't like to push or merge a lot of commits. To fix this git rebase is perfect.
+
+Example:
+
+```bash
+git rebase -i <base>
+
+# Commands:
+# p, pick = use commit
+# r, reword = use commit, but edit the commit message
+# e, edit = use commit, but stop for amending
+# s, squash = use commit, but meld into previous commit
+# f, fixup = like "squash", but discard this commit's log message
+# x, exec = run command (the rest of the line) using shell
+# d, drop = remove commit
+```
+
+#### Squash commits
+
+
 
 
 ## Bash
@@ -176,6 +200,43 @@ git push -u origin $(branchName)
 git branch | grep dev | xargs -I % git checkout %
 ```
 
+## Regex
+
+### Capture group
+
+This is a simple and rustic example what you can do with regex capture group.
+
+Change this:
+
+```html
+<a href="https://myerrordomain.com/">Link 1</a>
+<a href="https://myerrordomain.com/">Link 2</a>
+<a href="https://myerrordomain.com/">Link 3</a>
+```
+
+For:
+
+```html
+<a href="https://mydomain.com/p/1">Link 1</a>
+<a href="https://mydomain.com/p/2">Link 2</a>
+<a href="https://mydomain.com/p/3">Link 3</a>
+``` 
+
+In the VSCode Find feature enable Regular Expression (.*).
+
+Find:
+
+```bash
+(<a href=")(https://myerrordomain.com/")(>Link )([0-9])
+```
+
+Replace for:
+
+```bash
+$1https://mydomain.com/p/$4"$3$4
+``` 
+
+> Yes, you can easily improve this regex, this only a example to getting started.
 
 ## VSCode
 
