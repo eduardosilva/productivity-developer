@@ -200,6 +200,12 @@ git push -u origin $(branchName)
 git branch | grep dev | xargs -I % git checkout %
 ```
 
+### Find & copy command
+
+```bash
+find . -name '*-config.yaml' -exec cp {} ../otherFolder/ \;
+```
+
 ## Regex
 
 ### Capture group
