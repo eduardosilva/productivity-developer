@@ -12,6 +12,34 @@ These are  my thoughts on how to be a better developer improving performance in 
 
 ## Git
 
+### Auto-correct
+
+Enable auto-correct and suggested commands will run after 2 seconds.
+
+before:
+
+```bash
+git statsh pop
+
+git: 'statsh' is not a git command . See 'git --help'.
+
+the most similar command is
+    stash
+```
+
+```bash
+git config --global help.autocorrect 20
+```
+
+after:
+
+```bash
+git statsh pop
+
+WARNING: You called a Git command named 'statsh', witch does not exist.
+Continuing in 2.0 seconds, assuming that you meant 'stash'.
+```
+
 ### RERERE
 
 [git-rerere](https://git-scm.com/docs/git-rerere) is a command that allows you to save resolved conflict to replicate the same solution in the future.
