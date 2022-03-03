@@ -155,8 +155,6 @@ git rebase -i <base>
 # d, drop = remove commit
 ```
 
-#### Squash commits
-
 ### Push local git branch to a remote with a different name
 
 I've worked in a company where they use jira tickets as branch names. I don't like this pattern because it is difficult to know about what is that branch without access the jira. So there's a way to use a local, intuitive branch name and keep some strange remote branch name at same time :)
@@ -164,6 +162,21 @@ I've worked in a company where they use jira tickets as branch names. I don't li
 ```bash
 git push -u origin localBranchName:remoteBranchName
 ```
+
+### Pull all subfolder in a single command
+
+Sometimes I need to work with a lot of repositories and that is a shortcut to maintain them up to date.
+
+```bash
+for d in ./*/ ; do (cd "$d" && echo "$d" && [ -e .git ] &&  g pull); done
+```
+
+* Start a loop based in your current folder;
+* Run `cd` command to directory;
+* Print current directory;
+* Check if .git path exists inside the current directory;
+* Run `git pull` in the current directory; 
+
 
 ## Bash
 
