@@ -181,6 +181,9 @@ for d in ./*/ ; do (cd "$d" && echo "$d" && [ -e .git ] &&  g pull); done
 * Check if .git path exists inside the current directory;
 * Run `git pull` in the current directory; 
 
+### Git Hooks
+
+There are many several useful git hooks to increase productivity. [This](https://gist.github.com/eduardosilva/d84a6ccfb521300ae0cba7ebd2b95f39) is a list with some useful hooks.
 
 ## Bash
 
